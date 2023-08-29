@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="">
+	<head>
+		<title>Portfolio</title>
+		<link href="https://fonts.googleapis.com/css2?family=Rosario:wght@515&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="css/style.css">
+		<script src="lib/vue.min.js"></script>
+		<script src="lib/axios.min.js"></script>
+		<meta name="color-scheme" content="dark light">
+	</head>
+	<body>
+		<div id="app">
+			<header></header>
+			<article>
+				<div id="section-background"></div>
+				<div id="left_bar" @mouseover="enlarge=true" @mouseleave="enlarge=false" :class="{enlarge:enlarge}"></div>
+				<div id="right_bar" @mouseover="enlarge=true" @mouseleave="enlarge=false" :class="{enlarge:enlarge}">
+					<ul>
+						<li>
+							<button id="language-select">
+								<img src="assets/icons/world.png" class="language-icon">
+								<div id="language-options">
+									<template v-for="code in ['de', 'en', 'ja']">
+										<img :id="code" class="language-icon" @click="changeLanguage(code)" :src="'assets/icons/' + code + '.png'">
+									</template>
+								</div>
+							</button>
+						</li>
+						<li class="tablink">
+							<div @click="toggleDarkTheme()" id="theme-switcher"></div><div @click="toggleContrastTheme()" id="contrast-switcher"></span>
+						</li>
+						<template v-for="tab in config.tabs">
+							<li @click="changeTab(tab)" class="tablink"><img :src="'assets/icons/' + tab + '-icon.png'"><span>{{ translate(tab + '.title') }}</span></li>
+						</template>
+						<template v-for="social in config.socials">
+							<li class="quicklink">
+								<a :href="config['link.' + social]" target="_blank">
+									<img :src="'assets/icons/' + social + '-icon.png'"><span>{{ translate('quicklinks.' + social) }}</span>
+								</a>
+								&#x2197;
+							</li>
+						</template>
+					</ul>
+				</div>
+				<div id="portrait-wrapper">
+					<div id="portrait-background"></div>
+					<img id="portrait" src="assets/portrait.jpg" alt="handsome dude turning around and looking seductively at you ;)> | -|B">
+				</div>
+				<section id="content">
+					<Transition>
+					<section id="reference" v-if="activeTab === 'reference'" ref="reference">
+						<h1>{{ translate('reference.title') }}</h1>
+						<ul>
+							<div class="slider-wrapper">
+								<div class="slider-ball" ref="referenceball"></div>
+							</div>
+							<template v-for="reference in config.references">
+								<li @mouseover="changeBallHeight($event.currentTarget)" @mouseleave="$event.currentTarget.classList.remove('active')">
+									<div class="reference-heading">
+										<span class="reference-heading-date" :class="[config['colors.' + reference]]">{{ translate('reference.' + reference + '.date') }}</span>
+									</div>
+									<div class="reference-story">
+										<h1 class="reference-story-heading">{{ translate('reference.' + reference + '.title') }}</h1>
+										<span class="reference-story-content">{{ translate('reference.' + reference + '.desc') }}</span>
+									</div>
+								</li>
+							</template>
+						</ul>
+					</section>
+					</Transition>
+					<Transition>
+					<section id="competence" v-if="activeTab === 'competence'" ref="competence">
+						<h1>{{ translate('competence.title') }}</h1>
+						<div>
+							{{ translate('competence.php.desc') }}
+						</div>
+						<div class="open-right">
+							{{ translate('competence.php.exam') }}
+						</div>
+						<div class="open-left">
+							{{ translate('competence.vue.exam') }}
+						</div>
+						<div>
+							{{ translate('competence.vue.desc') }}
+						</div>
+						<div class="open-left">
+							{{ translate('competence.games.exam') }}
+						</div>
+						<div>
+							{{ translate('competence.games.desc') }}
+						</div>
+					</section>
+					</Transition>
+					<Transition>
+					<section id="story" v-if="activeTab === 'story'" ref="story">
+						<h1>{{ translate('story.title') }}</h1>
+						<div id="summary">
+							<template v-for="section in config.storySections">
+								<h2>{{ section }}</h2>
+							</template>
+						</div>
+						<div>
+							<h2>{{ translate('story.interests.title') }}</h2>
+							<p>{{ translate('story.interests.paragraph.1') }}</p>
+						</div>
+						<div>
+							<h2>{{ translate('story.jobs.title') }}</h2>
+							<p>{{ translate('story.jobs.paragraph.1') }}</p>
+							<p>{{ translate('story.jobs.paragraph.1') }}</p>
+						</div>
+					</section>
+					</Transition>
+				</section>
+			</article>
+			<footer>
+			</footer>
+		</div>
+
+		<script src="js/app.js"></script>
+	</body>
+</html>

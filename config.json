@@ -1,0 +1,19 @@
+{
+	"socials": ["github", "linkedin"],
+	"link": {
+		"github": "https://github.com/A1asd",
+		"linkedin": "https://de.linkedin.com/in/johannes-galanjuk-b7a156227"
+	},
+	"references": ["school", "uni", "studentrep", "admin", "developer", "apprent", "kardistik", "workingholiday", "future"],
+	"tabs": ["reference", "competence", "story"],
+	"storySections": ["früh", "später", "hobbies"],
+	"colors.school": "blue",
+	"colors.uni": "green",
+	"colors.studentrep": "blue",
+	"colors.admin": "purple",
+	"colors.developer": "blue",
+	"colors.apprent": "green",
+	"colors.kardistik": "purple",
+	"colors.workingholiday": "green",
+	"colors.future": "purple"
+}
