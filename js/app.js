@@ -40,14 +40,12 @@ const app = createApp({
 			let translation = this.i18n[this.locale];
 			for (let i = 0; i < splitCode.length; i++) {
 				translation = translation[splitCode[i]];
-				if(translation === undefined) return "(T)" + code
+				if (translation === undefined) return "(T)" + code
 			}
 			return translation;
 		},
-		getTranslationData: function() {
-			axios.get('./translations/de.json').then(response => {this.i18n['de'] = response.data});
-			axios.get('./translations/en.json').then(response => {this.i18n['en'] = response.data});
-			axios.get('./translations/ja.json').then(response => {this.i18n['ja'] = response.data});
+		getTranslationData: function(locale) {
+			axios.get('./translations/' + locale + '.json').then(response => {this.i18n[locale] = response.data});
 		},
 		getLeftBarWidth: function() {
 			return this.$refs.leftBar.offsetWidth ?? '0px'
@@ -67,12 +65,12 @@ const app = createApp({
 		this.$refs.referenceball.style.top = '0';
 	},
 	data() {
-		this.getTranslationData();
+		['de', 'en', 'ja'].forEach(lc => this.getTranslationData(lc));
 		return {
 			enlarge: false,
 			activeTab: '',
 			locale: navigator.languages[0].split('-')[0],
-			i18n: {'de':{},'en':{},'ja':{}},
+			i18n: {'de':{}, 'en':{}, 'ja':{}},
 			config: axios.get('./config.json').then(response => this.config = response.data),
 			leftBarWidth: this.getLeftBarWidth,
 			betterTranslations: [],
