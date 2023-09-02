@@ -2,6 +2,7 @@
 	/* Dimensions */
 	--border-height: 100px;
 	--portrait-offset: -50px;
+	--sidebar-wdith: 0px;
 
 	/* Theming */
 	/* Colors */
@@ -205,6 +206,10 @@ footer {
 
 .quicklink a span {
 	align-self: center;
+}
+
+.tablink.active {
+	background-color: var(--main-bg);
 }
 
 .tablink img, .quicklink img, .tablink > div {
@@ -412,11 +417,15 @@ footer {
 #story h2::before {
 	content: '#';
 	position: absolute;
-	left: -76px;
+	right: calc(100% + 34px);
 	font-size: 3rem;
 	top: -14px;
-	color: var(--main-bg);
+	color: var(--main-text);
 	pointer-events: none;
+	text-align: right;
+	width: calc(--sidebar-width - 9px);
+	background: var(--main-bg);
+	padding-right: 9px;
 }
 
 /********************************/

@@ -13,7 +13,7 @@
 			<header></header>
 			<article>
 				<div id="section-background"></div>
-				<div id="left_bar" @mouseover="enlarge=true" @mouseleave="enlarge=false" :class="{enlarge:enlarge}"></div>
+				<div id="left_bar" ref="leftBar" @mouseover="enlarge=true" @mouseleave="enlarge=false" :class="{enlarge:enlarge}"></div>
 				<div id="right_bar" @mouseover="enlarge=true" @mouseleave="enlarge=false" :class="{enlarge:enlarge}">
 					<ul>
 						<li>
@@ -30,11 +30,11 @@
 							<div @click="toggleDarkTheme()" id="theme-switcher"></div><div @click="toggleContrastTheme()" id="contrast-switcher"></span>
 						</li>
 						<template v-for="tab in config.tabs">
-							<li @click="changeTab(tab)" class="tablink"><img :src="'assets/icons/' + tab + '-icon.png'"><span>{{ translate(tab + '.title') }}</span></li>
+							<li @click="changeTab(tab)" :class="{tablink: true, active: tab === activeTab}"><img :src="'assets/icons/' + tab + '-icon.png'"><span>{{ translate(tab + '.title') }}</span></li>
 						</template>
 						<template v-for="social in config.socials">
 							<li class="quicklink">
-								<a :href="config['link.' + social]" target="_blank">
+								<a :href="config['link'][social]" target="_blank">
 									<img :src="'assets/icons/' + social + '-icon.png'"><span>{{ translate('quicklinks.' + social) }}</span>
 								</a>
 								&#x2197;
@@ -47,6 +47,7 @@
 					<img id="portrait" src="assets/portrait.jpg" alt="handsome dude turning around and looking seductively at you ;)> | -|B">
 				</div>
 				<section id="content">
+					<h2>{{ translate('construction') }}</h2>
 					<Transition>
 					<section id="reference" v-if="activeTab === 'reference'" ref="reference">
 						<h1>{{ translate('reference.title') }}</h1>
@@ -92,11 +93,12 @@
 					</section>
 					</Transition>
 					<Transition>
-					<section id="story" v-if="activeTab === 'story'" ref="story">
+					<section id="story" v-if="activeTab === 'story'" ref="story" :style="{'--sidebar-wdith': leftBarWidth}">
 						<h1>{{ translate('story.title') }}</h1>
 						<div id="summary">
 							<template v-for="section in config.storySections">
-								<h2>{{ section }}</h2>
+								<h2>{{ translate('story.' + section + '.title') }}</h2>
+								<p>{{ translate('story.' + section + '.content') }}</p>
 							</template>
 						</div>
 						<div>
@@ -106,7 +108,7 @@
 						<div>
 							<h2>{{ translate('story.jobs.title') }}</h2>
 							<p>{{ translate('story.jobs.paragraph.1') }}</p>
-							<p>{{ translate('story.jobs.paragraph.1') }}</p>
+							<p>{{ translate('story.jobs.paragraph.2') }}</p>
 						</div>
 					</section>
 					</Transition>

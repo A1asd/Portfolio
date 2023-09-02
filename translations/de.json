@@ -1,59 +1,103 @@
 {
-	"test": {
-		"this": {
-			"should": "work!"
-		}
-	},
+	"construction": "!!Diese Webseite befindet sich im Aufbau!!",
 	"reference": {
 		"title": "Lebenslauf",
 		"school": {
-			"title": "Schule"
+			"title": "Schule",
+			"date": "2000 - 2013",
+			"desc": "this is a short story und so. vielleicht gibt es ja spannenden sachen zu dem thema zu schreiben, aber ich glaube es wird eher immer so eine zeile oder so. glaube nicht dass es da viel zu sagen gibt. lol."
+		},
+		"uni": {
+			"title": "Uni",
+			"date": "2013 - 2018",
+			"desc": "In der Uni sollte sich herausstellen, dass mein weiterer Lebensweg durch die Informatik führt. Hier habe ich auch erste Berührungspunkte mit der Japanischen Sprache in meinen ersten beiden Semestern gehabt, was später in meiner Geschichte wichtig wird."
+		},
+		"studentrep": {
+			"title": "Fachschaftsrat",
+			"date": "2014 - 2018",
+			"desc": "Ich war Fachschaftsrat"
+		},
+		"admin": {
+			"title": "Sysadmin",
+			"date": "2015 - 2017",
+			"desc": "Als Systemadministrator an der Uni habe ich viele Erfahrungen im Bereich der Netzwerke großer Institutionen gemacht hatte dort aber auch meine ersten Berührungspunkte mit PHP und Ruby, woraufhin ich meine ersten Websiten mit PHP gebaut habe."
+		},
+		"apprent": {
+			"title": "Ausbildung",
+			"date": "2019 - 2021",
+			"desc": "Bei Brandseven habe ich meine Ausbildung zum Softwareentwickler durchgeführt."
+		},
+		"developer": {
+			"title": "Full-Stack Webentwickler",
+			"date": "2018 - 2021",
+			"desc": "Bei Brandseven hat die Zeit begonnen in der ich richtig mit PHP in Berührung kam. Dort lernte ich Frameworks zu benutzen und was es heißt an größeren Projekten mitzuarbeiten."
+		},
+		"kardistik": {
+			"title": "Firmengründung Artis Cardis GbR",
+			"date": "2021 - heute",
+			"desc": "Nach der Ausbildung erstmal Firma gründen. was geht aaaaaaaaaaab."
+		},
+		"workingholiday": {
+			"title": "Japan Auslandsjahr",
+			"date": "2023 - heute",
+			"desc": "Das Auslandsjahr in Japan war eine große Herausforderung für mich, weil hier die Kombination vieler meiner Fähigkeiten gefragt war und mir Klar wurde, dass die wichtigen Tests keine Note geben, sondern Erfahrungen"
+		},
+		"future": {
+			"title": "Was die Zukunft bringt",
+			"date": "steht in den sternen",
+			"desc": "niemand was weiß die zukunft bringen wird"
 		}
 	},
-	"reference.title": "Lebenslauf",
-	"reference.school.title": "Schule",
-	"reference.school.date": "2000 - 2013",
-	"reference.school.desc": "this is a short story und so. vielleicht gibt es ja spannenden sachen zu dem thema zu schreiben, aber ich glaube es wird eher immer so eine zeile oder so. glaube nicht dass es da viel zu sagen gibt. lol.",
-	"reference.uni.title": "Uni",
-	"reference.uni.date": "2013 - 2018",
-	"reference.uni.desc": "In der Uni sollte sich herausstellen, dass mein weiterer Lebensweg durch die Informatik führt. Hier habe ich auch erste Berührungspunkte mit der Japanischen Sprache in meinen ersten beiden Semestern gehabt, was später in meiner Geschichte wichtig wird.",
-	"reference.studentrep.title": "Fachschaftsrat",
-	"reference.studentrep.date": "2014 - 2018",
-	"reference.studentrep.desc": "Ich war Fachschaftsrat",
-	"reference.admin.title": "Sysadmin",
-	"reference.admin.date": "2015 - 2017",
-	"reference.admin.desc": "Als Systemadministrator an der Uni habe ich viele Erfahrungen im Bereich der Netzwerke großer Institutionen gemacht hatte dort aber auch meine ersten Berührungspunkte mit PHP und Ruby, woraufhin ich meine ersten Websiten mit PHP gebaut habe.",
-	"reference.apprent.title": "Ausbildung",
-	"reference.apprent.date": "2019 - 2021",
-	"reference.apprent.desc": "Bei Brandseven habe ich meine Ausbildung zum Softwareentwickler durchgeführt.",
-	"reference.developer.title": "Full-Stack Webentwickler",
-	"reference.developer.date": "2018 - 2021",
-	"reference.developer.desc": "Bei Brandseven hat die Zeit begonnen in der ich richtig mit PHP in Berührung kam. Dort lernte ich Frameworks zu benutzen und was es heißt an größeren Projekten mitzuarbeiten.",
-	"reference.kardistik.title": "Firmengründung Artis Cardis GbR",
-	"reference.kardistik.date": "2021 - heute",
-	"reference.kardistik.desc": "Nach der Ausbildung erstmal Firma gründen. was geht aaaaaaaaaaab.",
-	"reference.workingholiday.title": "Japan Auslandsjahr",
-	"reference.workingholiday.date": "2023 - heute",
-	"reference.workingholiday.desc": "Das Auslandsjahr in Japan war eine große Herausforderung für mich, weil hier die Kombination vieler meiner Fähigkeiten gefragt war und mir Klar wurde, dass die wichtigen Tests keine Note geben, sondern Erfahrungen",
-	"reference.future.title": "Was die Zukunft bringt",
-	"reference.future.date": "steht in den sternen",
-	"reference.future.desc": "niemand was weiß die zukunft bringen wird",
-	"competence.title": "Fähigkeiten",
-	"competence.php.desc": "PHP habe ich während meines Studiums das erste mal angefasst. Damals fand ichs echt cool und heute find ichs immer noch ganz nett.",
-	"competence.php.exam": "Hier entweder screenshot von meiner planetenseite oder links zu kleinen spielereien, wie stars oder so billo kram. maybe vllt auch ein link zum blab und/oder mech rpg",
-	"competence.vue.desc": "vue habe ich während meiner lehre zum softwareentwickler entdeckt, was mir schon ein bisschen spaß macht, vor allem in verbindung mit node servern und so",
-	"competence.vue.exam": "Hier einen link zum blab und/oder mech rpg",
-	"competence.games.desc": "Früh habe ich für WarCraft III Mods geschrieben um sie mit meinen freunden auf lan parties zu spielen. Dies war auch mein erster wirklicher Kontakt mit Programmierung, insbesondere Spieleprogrammierung. Später dann unreal engine, was ich aber schnell wegen der komplexität und fehlender tutorials und lehrbücher abgebrochen habe. während der uni zeit dann godot was mich wieder dazu gebracht hat, mehr an spielen zu entwickeln. großes verständnis im allgemeinen für programmierung bekommen",
-	"competence.games.exam": "hier bisschen godot kram oder so. paar screenshots maybe, vllt auch wc3 map",
-	"competence.team.desc": "",
-	"competence.team.exam": "",
-	"story.title": "Über mich",
-	"story": "Officia cillum ipsum elit et commodo laborum. Magna esse aliqua ullamco sint sit cillum adipisicing adipisicing anim tempor deserunt sit. Mollit Lorem velit consectetur fugiat cillum minim commodo quis duis culpa commodo. Consequat velit qui aliqua nulla nostrud.",
-	"story.interests.title": "interessen",
-	"story.interests.paragraph.1": "interessen sind interessant",
-	"story.jobs.title": "jobs",
-	"story.jobs.paragraph.1": "jobs die ich gemacht habe",
-	"story.jobs.paragraph.2": "was ich da so gelernt habe",
-	"quicklinks.github": "Github",
-	"quicklinks.linkedin": "LinkedIn"
+	"competence": {
+		"title": "Fähigkeiten",
+		"php": {
+			"desc": "PHP habe ich während meines Studiums das erste mal angefasst. Damals fand ichs echt cool und heute find ichs immer noch ganz nett.",
+			"exam": "Hier entweder screenshot von meiner planetenseite oder links zu kleinen spielereien, wie stars oder so billo kram. maybe vllt auch ein link zum blab und/oder mech rpg"
+		},
+		"vue": {
+			"desc": "vue habe ich während meiner lehre zum softwareentwickler entdeckt, was mir schon ein bisschen spaß macht, vor allem in verbindung mit node servern und so",
+			"exam": "Hier einen link zum blab und/oder mech rpg"
+		},
+		"games": {
+			"desc": "Früh habe ich für WarCraft III Mods geschrieben um sie mit meinen freunden auf lan parties zu spielen. Dies war auch mein erster wirklicher Kontakt mit Programmierung, insbesondere Spieleprogrammierung. Später dann unreal engine, was ich aber schnell wegen der komplexität und fehlender tutorials und lehrbücher abgebrochen habe. während der uni zeit dann godot was mich wieder dazu gebracht hat, mehr an spielen zu entwickeln. großes verständnis im allgemeinen für programmierung bekommen",
+			"exam": "hier bisschen godot kram oder so. paar screenshots maybe, vllt auch wc3 map"
+		},
+		"team": {
+			"desc": "",
+			"exam": ""
+		}
+	},
+	"story": {
+		"story": "Officia cillum ipsum elit et commodo laborum. Magna esse aliqua ullamco sint sit cillum adipisicing adipisicing anim tempor deserunt sit. Mollit Lorem velit consectetur fugiat cillum minim commodo quis duis culpa commodo. Consequat velit qui aliqua nulla nostrud.",
+		"title": "Über mich",
+		"early": {
+			"title": "Früh",
+			"content": "früher content"
+		},
+		"later": {
+			"title": "Später",
+			"content": "späterererer contet"
+		},
+		"hobbies": {
+			"title": "Hobbies",
+			"content": "meine hobbieeeeees"
+		},
+		"interests": {
+			"title": "interessen",
+			"paragraph": {
+				"1": "interessen sind interessant"
+			}
+		},
+		"jobs": {
+			"title": "jobs",
+			"paragraph": {
+				"1": "jobs die ich gemacht habe",
+				"2": "was ich da so gelernt habe"
+			}
+		}
+	},
+	"quicklinks": {
+		"github": "Github",
+		"linkedin": "LinkedIn"
+	}
 }

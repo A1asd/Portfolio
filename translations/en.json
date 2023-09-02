@@ -1,8 +1,11 @@
 {
-	"reference.title": "Reference",
-	"reference.school": "2001 - 2013 School",
-	"reference.uni": "2013 - 2019 University",
-	"reference.admin": "2016 - 2018 Sysadmin",
-	"reference.developer": "2018 - 2022 PHP Developer",
-	"reference.workingholiday": "2023 - current Japan Working Holiday"
+	"construction": "!!This website is currently under construction!!",
+	"reference": {
+		"title": "Reference",
+		"school": "2001 - 2013 School",
+		"uni": "2013 - 2019 University",
+		"admin": "2016 - 2018 Sysadmin",
+		"developer": "2018 - 2022 PHP Developer",
+		"workingholiday": "2023 - current Japan Working Holiday"
+	}
 }

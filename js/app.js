@@ -14,7 +14,6 @@ const app = createApp({
 			let padding = window.getComputedStyle(t, null).getPropertyValue('padding-top');
 			this.$refs.referenceball.style.top = t.offsetTop + parseFloat(padding) + 2 + 'px';
 			target.classList.add('active');
-			console.log(this.i18n.de.test.this.should);
 		},
 		toggleDarkTheme() {
 			if (document.documentElement.classList.contains('dark')) {
@@ -36,13 +35,22 @@ const app = createApp({
 				localStorage.setItem("contrast", true);
 			}
 		},
-		translate: function(code) {
-			return this.i18n[this.locale][code] || '(T)' + code;
+		translate: function(code){
+			let splitCode = code.split('.');
+			let translation = this.i18n[this.locale];
+			for (let i = 0; i < splitCode.length; i++) {
+				translation = translation[splitCode[i]];
+				if(translation === undefined) return "(T)" + code
+			}
+			return translation;
 		},
 		getTranslationData: function() {
 			axios.get('./translations/de.json').then(response => {this.i18n['de'] = response.data});
 			axios.get('./translations/en.json').then(response => {this.i18n['en'] = response.data});
 			axios.get('./translations/ja.json').then(response => {this.i18n['ja'] = response.data});
+		},
+		getLeftBarWidth: function() {
+			return this.$refs.leftBar.offsetWidth ?? '0px'
 		}
 	},
 	beforeMount() {
@@ -66,6 +74,8 @@ const app = createApp({
 			locale: navigator.languages[0].split('-')[0],
 			i18n: {'de':{},'en':{},'ja':{}},
 			config: axios.get('./config.json').then(response => this.config = response.data),
+			leftBarWidth: this.getLeftBarWidth,
+			betterTranslations: [],
 		}
 	}
 });

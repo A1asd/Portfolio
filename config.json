@@ -6,7 +6,7 @@
 	},
 	"references": ["school", "uni", "studentrep", "admin", "developer", "apprent", "kardistik", "workingholiday", "future"],
 	"tabs": ["reference", "competence", "story"],
-	"storySections": ["früh", "später", "hobbies"],
+	"storySections": ["early", "later", "hobbies"],
 	"colors.school": "blue",
 	"colors.uni": "green",
 	"colors.studentrep": "blue",
