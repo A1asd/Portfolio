@@ -56,7 +56,7 @@ const app = createApp({
 	beforeMount() {
 		this.changeLanguage(this.locale);
 		this.changeTab(localStorage.getItem("tab") ?? 'competence');
-		if (localStorage.getItem("theme") === 'dark') {
+		if (localStorage.getItem("theme") === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
 			document.documentElement.classList.add('dark');
 		}
 		if (localStorage.getItem("contrast")) {
