@@ -13,7 +13,11 @@
 			<header></header>
 			<article>
 				<div id="section-background"></div>
-				<div id="left_bar" ref="leftBar" @mouseover="enlarge=true" @mouseleave="enlarge=false" :class="{enlarge:enlarge}"></div>
+				<div id="left_bar" ref="leftBar" @mouseover="enlarge=true" @mouseleave="enlarge=false" :class="{enlarge:enlarge}">
+					<template v-if="activeTab === 'story'" v-for="section in config.storySections">
+						<div class="story-checkpoint" style="top: 216px"></div>
+					</template>
+				</div>
 				<div id="right_bar" @mouseover="enlarge=true" @mouseleave="enlarge=false" :class="{enlarge:enlarge}">
 					<ul>
 						<li>

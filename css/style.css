@@ -406,6 +406,13 @@ footer {
 	right: -6px;
 }
 
+.story-checkpoint {
+	height: 3.7em;
+	width: 100%;
+	background-color: var(--main-bg);
+	position: absolute;
+}
+
 #story {
 
 }
@@ -418,14 +425,14 @@ footer {
 	content: '#';
 	position: absolute;
 	right: calc(100% + 34px);
-	font-size: 3rem;
-	top: -14px;
+	font-size: 2rem;
+	top: -6px;
 	color: var(--main-text);
 	pointer-events: none;
 	text-align: right;
 	width: calc(--sidebar-width - 9px);
 	background: var(--main-bg);
-	padding-right: 9px;
+	padding-right: 14px;
 }
 
 /********************************/
